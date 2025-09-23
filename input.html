@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Team</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
+    <style>
+      .team-slider {
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in-out;
+        width: 100%;
+        max-width: none;
+      }
+      .team-slider.active {
+        transform: translateX(0);
+      }
+      .overlay {
+        background-color: rgba(0, 0, 0, 0.7);
+      }
+      /* Custom hover effect for the new cards */
+      .team-card-container {
+        transition: all 0.3s ease;
+      }
+      .team-card-container:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      }
+      /* Custom list style for checkmarks */
+      .cv-section ul {
+        list-style: none;
+        padding-left: 0;
+      }
+      .cv-section li {
+        position: relative;
+        padding-left: 1.5rem; /* Space for the icon */
+        margin-bottom: 0.5rem;
+      }
+      .cv-section li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 4px;
+        width: 1rem;
+        height: 1rem;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2310B981' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-50 dark:bg-gray-950 transition-colors duration-300">
+    <div class="container mx-auto px-4 py-16 relative">
+      <div class="absolute top-4 right-4">
+        <div class="relative inline-block">
+          <button
+            id="theme-toggle"
+            class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700"
+          >
+            <i
+              data-feather="sun"
+              class="hidden dark:block w-5 h-5 text-gray-300"
+            ></i>
+            <i
+              data-feather="moon"
+              class="block dark:hidden w-5 h-5 text-gray-700"
+            ></i>
+          </button>
+          <div
+            id="theme-menu"
+            class="hidden absolute right-0 mt-2 w-32 bg-white dark:bg-gray-800 rounded-md shadow-lg z-50"
+          >
+            <button
+              data-theme="system"
+              class="block w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
+            >
+              System
+            </button>
+            <button
+              data-theme="light"
+              class="block w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
+            >
+              Light
+            </button>
+            <button
+              data-theme="dark"
+              class="block w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
+            >
+              Dark
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <h1
+        class="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-4 text-center"
+        data-aos="fade-down"
+      >
+        Meet Our Leadership
+      </h1>
+      <p
+        class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-24 text-lg text-center"
+        data-aos="fade-down"
+        data-aos-delay="100"
+      >
+        Our leadership team combines vision, expertise, and innovation to
+        deliver enterprise-grade technology solutions and drive HOPEHUBTECH's
+        global mission.
+      </p>
+
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-24 max-w-4xl mx-auto"
+      >
+        <div
+          class="team-card-container rounded-2xl"
+          data-aos="fade-up"
+          data-aos-once="true"
+        >
+          <div
+            class="relative bg-white dark:bg-gray-800 rounded-2xl shadow-xl pt-24 pb-8 px-4 text-center border border-gray-200 dark:border-gray-700"
+          >
+            <div
+              class="absolute -top-16 left-1/2 -translate-x-1/2 w-32 h-32 bg-white dark:bg-gray-800 rounded-full p-1.5"
+            >
+              <img
+                src="1.Mahbubur Rahman Chowdhury.jpg"
+                alt="Mahbubur Rahman Chowdhury"
+                class="w-full h-full object-cover rounded-full"
+              />
+            </div>
+            <h3 class="text-xl font-bold text-slate-800 dark:text-white">
+              Mahbubur Rahman Chowdhury
+            </h3>
+            <p class="text-green-500 font-semibold mt-1">CEO & Founder</p>
+            <div class="flex justify-center items-center gap-4 mt-6">
+              <a
+                href="#"
+                class="text-gray-400 hover:text-blue-700 dark:hover:text-blue-500 transition-colors"
+                ><i data-feather="linkedin" class="w-6 h-6"></i
+              ></a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-red-500 dark:hover:text-red-400 transition-colors"
+                ><i data-feather="mail" class="w-6 h-6"></i
+              ></a>
+            </div>
+            <div class="flex justify-center mt-6">
+              <button
+                onclick="showMemberDetails(1)"
+                class="text-green-500 hover:text-green-700 dark:text-green-400 dark:hover:text-green-300 font-semibold flex items-center transition-colors"
+              >
+                Show more
+                <i data-feather="chevron-right" class="ml-1 w-4 h-4"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="team-card-container rounded-2xl"
+          data-aos="fade-up"
+          data-aos-delay="100"
+          data-aos-once="true"
+        >
+          <div
+            class="relative bg-white dark:bg-gray-800 rounded-2xl shadow-xl pt-24 pb-8 px-4 text-center border border-gray-200 dark:border-gray-700"
+          >
+            <div
+              class="absolute -top-16 left-1/2 -translate-x-1/2 w-32 h-32 bg-white dark:bg-gray-800 rounded-full p-1.5"
+            >
+              <img
+                src="MD. Shishir Hossain.jpg"
+                alt="MD Shishir Hossain"
+                class="w-full h-full object-cover rounded-full"
+              />
+            </div>
+            <h3 class="text-xl font-bold text-slate-800 dark:text-white">
+              MD Shishir Hossain
+            </h3>
+            <p class="text-green-500 font-semibold mt-1">CTO</p>
+            <div class="flex justify-center items-center gap-4 mt-6">
+              <a
+                href="#"
+                class="text-gray-400 hover:text-blue-700 dark:hover:text-blue-500 transition-colors"
+                ><i data-feather="linkedin" class="w-6 h-6"></i
+              ></a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-red-500 dark:hover:text-red-400 transition-colors"
+                ><i data-feather="mail" class="w-6 h-6"></i
+              ></a>
+            </div>
+            <div class="flex justify-center mt-6">
+              <button
+                onclick="showMemberDetails(2)"
+                class="text-green-500 hover:text-green-700 dark:text-green-400 dark:hover:text-green-300 font-semibold flex items-center transition-colors"
+              >
+                Show more
+                <i data-feather="chevron-right" class="ml-1 w-4 h-4"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="team-card-container rounded-2xl"
+          data-aos="fade-up"
+          data-aos-once="true"
+        >
+          <div
+            class="relative bg-white dark:bg-gray-800 rounded-2xl shadow-xl pt-24 pb-8 px-4 text-center border border-gray-200 dark:border-gray-700"
+          >
+            <div
+              class="absolute -top-16 left-1/2 -translate-x-1/2 w-32 h-32 bg-white dark:bg-gray-800 rounded-full p-1.5"
+            >
+              <img
+                src="Kifayat Kowshol.jpg"
+                alt="Kifayet Kowshol"
+                class="w-full h-full object-cover rounded-full"
+              />
+            </div>
+            <h3 class="text-xl font-bold text-slate-800 dark:text-white">
+              Kifayet Kowshol
+            </h3>
+            <p class="text-green-500 font-semibold mt-1">Lead Engineer</p>
+            <div class="flex justify-center items-center gap-4 mt-6">
+              <a
+                href="#"
+                class="text-gray-400 hover:text-blue-700 dark:hover:text-blue-500 transition-colors"
+                ><i data-feather="linkedin" class="w-6 h-6"></i
+              ></a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-red-500 dark:hover:text-red-400 transition-colors"
+                ><i data-feather="mail" class="w-6 h-6"></i
+              ></a>
+            </div>
+            <div class="flex justify-center mt-6">
+              <button
+                onclick="showMemberDetails(3)"
+                class="text-green-500 hover:text-green-700 dark:text-green-400 dark:hover:text-green-300 font-semibold flex items-center transition-colors"
+              >
+                Show more
+                <i data-feather="chevron-right" class="ml-1 w-4 h-4"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="team-card-container rounded-2xl"
+          data-aos="fade-up"
+          data-aos-delay="100"
+          data-aos-once="true"
+        >
+          <div
+            class="relative bg-white dark:bg-gray-800 rounded-2xl shadow-xl pt-24 pb-8 px-4 text-center border border-gray-200 dark:border-gray-700"
+          >
+            <div
+              class="absolute -top-16 left-1/2 -translate-x-1/2 w-32 h-32 bg-white dark:bg-gray-800 rounded-full p-1.5"
+            >
+              <img
+                src="3. Md. Tanvir Rahman.jpg"
+                alt="Tanvir Rahman"
+                class="w-full h-full object-cover rounded-full"
+              />
+            </div>
+            <h3 class="text-xl font-bold text-slate-800 dark:text-white">
+              Tanvir Rahman
+            </h3>
+            <p class="text-green-500 font-semibold mt-1">Head of Product</p>
+            <div class="flex justify-center items-center gap-4 mt-6">
+              <a
+                href="#"
+                class="text-gray-400 hover:text-blue-700 dark:hover:text-blue-500 transition-colors"
+                ><i data-feather="linkedin" class="w-6 h-6"></i
+              ></a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-red-500 dark:hover:text-red-400 transition-colors"
+                ><i data-feather="mail" class="w-6 h-6"></i
+              ></a>
+            </div>
+            <div class="flex justify-center mt-6">
+              <button
+                onclick="showMemberDetails(4)"
+                class="text-green-500 hover:text-green-700 dark:text-green-400 dark:hover:text-green-300 font-semibold flex items-center transition-colors"
+              >
+                Show more
+                <i data-feather="chevron-right" class="ml-1 w-4 h-4"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fixed inset-0 z-50 overflow-hidden hidden">
+        <div
+          onclick="hideMemberDetails()"
+          class="absolute inset-0 overlay"
+        ></div>
+        <div class="absolute inset-y-0 right-0 max-w-full flex">
+          <div
+            onclick="event.stopPropagation()"
+            class="team-slider relative w-screen max-w-4xl bg-white dark:bg-gray-800"
+          >
+            <div class="absolute top-0 right-0 pt-4 pr-4 z-10">
+              <button
+                onclick="hideMemberDetails()"
+                class="text-green-500 hover:text-green-700 rounded-full border border-green-500 p-2 hover:border-green-700 transition-colors"
+              >
+                <i data-feather="x" class="w-8 h-8"></i>
+              </button>
+            </div>
+            <div
+              id="cv-content"
+              class="h-full overflow-y-auto p-8 md:p-12"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      AOS.init();
+      feather.replace();
+
+      // --- Theme toggle functionality ---
+      const themeToggle = document.getElementById("theme-toggle");
+      const themeMenu = document.getElementById("theme-menu");
+      themeToggle.addEventListener("click", () =>
+        themeMenu.classList.toggle("hidden")
+      );
+      document.querySelectorAll("#theme-menu button").forEach((button) => {
+        button.addEventListener("click", () => {
+          const theme = button.dataset.theme;
+          if (theme === "system") {
+            localStorage.removeItem("theme");
+            updateTheme();
+          } else {
+            localStorage.setItem("theme", theme);
+            document.documentElement.className = theme;
+          }
+          themeMenu.classList.add("hidden");
+        });
+      });
+      function updateTheme() {
+        if (
+          localStorage.theme === "dark" ||
+          (!("theme" in localStorage) &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches)
+        ) {
+          document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+        }
+      }
+      updateTheme();
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", updateTheme);
+
+      // --- UPDATED Team Member Data with CV details ---
+      const teamMembers = [
+        {
+          id: 1,
+          name: "Mahbubur Rahman Chowdhury",
+          image: "1.Mahbubur Rahman Chowdhury.jpg",
+          designation:
+            "Founder & CEO, HopeHubTech<br>Faculty Member, CSE, NPIUB",
+          tagline:
+            "Creating career opportunities for underprivileged active learners.",
+          profileSummary:
+            "Mahbubur Rahman Chowdhury is the Founder of HopeHubTech and a faculty member in Computer Science and Engineering at NPIUB. His expertise includes UI/UX design and web development, with a strong research interest in cognitive psychology and its application to human-centered design. In addition to leading his team in web development projects, he is passionate about teaching and mentoring students—particularly those with limited resources—to help them build successful careers in IT.",
+          expertise: [
+            "UI/UX Design with a focus on human-centered and cognitive psychology-based design principles.",
+            "Human-Computer Interaction (HCI).",
+            "Cognitive Psychology in Design - applying memory, perception, and behavior studies to UI/UX.",
+            "Software Project Management - leading teams, integrate workflow, and client communication.",
+            "Academic Teaching & Mentorship - guiding CSE students in IT skills and career development.",
+          ],
+          experience: [
+            {
+              role: "Founder & CEO",
+              company: "HopeHubTech",
+              period: "August, 2025 – Present",
+              tasks: [
+                "Established HopeHubTech, a software firm focused on web development, UI/UX, and ensuring user-centered design principles.",
+                "Leading a small team of developers and designers while mentoring them in real-world project execution.",
+              ],
+            },
+            {
+              role: "Faculty, CSE",
+              company: "NPIUB",
+              period: "2019 – Present",
+              tasks: [
+                "Taught courses: Human-Computer Interaction, Information System Design.",
+                "Guided student thesis projects and trained undergraduates in practical IT skills.",
+                "Specialized in integrating cognitive psychology into design-related teaching and research.",
+              ],
+            },
+          ],
+          achievements: [
+            "Contributed to curriculum development and delivery of innovative teaching methods in IT education.",
+            "Selected as Sera Nobin Uddouktha 2019.",
+            "Successfully completed the team's first client project, applying cognitive psychology principles to improve usability.",
+          ],
+          academicBackground: "B.Sc. in CSE, DUET.",
+          contacts: {
+            linkedin: "https://www.linkedin.com/in/mahbubhimu",
+            whatsapp: "+880 1753 0707 93",
+            facebook: "https://www.facebook.com/mahbubhimu",
+          },
+          personalTouch: [
+            "Listening to people's suffering and comforting them.",
+            "Rearing of birds and livestock.",
+            "Loving little children.",
+            "Fishing.",
+            "Talking to workers and village farmers.",
+            "Creating job opportunities for the active unemployed population.",
+          ],
+        },
+        {
+          // Placeholder data for other members
+          id: 2,
+          name: "MD Shishir Hossain",
+          image: "MD. Shishir Hossain.jpg",
+          designation: "Chief Technology Officer, HopeHubTech",
+          tagline: "Building robust and scalable technology solutions.",
+          profileSummary:
+            "As CTO, MD Shishir Hossain leads the company's technological vision, implementing strategies that ensure robust, scalable, and cutting-edge solutions for our clients.",
+          expertise: [
+            "System Architecture",
+            "Cloud Computing (AWS, Azure)",
+            "DevOps & CI/CD",
+            "Database Management",
+            "API Design & Integration",
+          ],
+          experience: [
+            {
+              role: "CTO",
+              company: "HopeHubTech",
+              period: "2025 - Present",
+              tasks: [
+                "Leading the engineering team.",
+                "Defining the company's technology stack and infrastructure.",
+                "Ensuring security and compliance standards.",
+              ],
+            },
+          ],
+          achievements: [
+            "Implemented a new CI/CD pipeline, reducing deployment times by 40%.",
+            "Led the successful migration to a microservices architecture.",
+          ],
+          academicBackground:
+            "M.Sc. in Software Engineering, Major University.",
+          contacts: { linkedin: "#", whatsapp: "#", facebook: "#" },
+          personalTouch: [
+            "Competitive programming",
+            "Exploring new open-source technologies",
+            "Building home automation projects.",
+          ],
+        },
+        {
+          id: 3,
+          name: "Kifayat Kowshol",
+          image: "Kifayat Kowshol.jpg",
+          designation: "Lead Engineer, HopeHubTech",
+          tagline: "Crafting elegant code and delightful user experiences.",
+          profileSummary:
+            "Kifayat Kowshol is a lead engineer with a passion for clean code and user-centric design. He mentors junior developers and ensures the technical quality of all project deliverables.",
+          expertise: [
+            "Frontend Development (React, Vue)",
+            "UI/UX Implementation",
+            "Test-Driven Development (TDD)",
+            "Agile Methodologies",
+            "Performance Optimization",
+          ],
+          experience: [
+            {
+              role: "Lead Engineer",
+              company: "HopeHubTech",
+              period: "2025 - Present",
+              tasks: [
+                "Developing and maintaining key application features.",
+                "Conducting code reviews and setting best practices.",
+                "Collaborating with designers to create seamless user interfaces.",
+              ],
+            },
+          ],
+          achievements: [
+            "Key developer on the company's flagship product.",
+            "Received 'Employee of the Quarter' for exceptional problem-solving skills.",
+          ],
+          academicBackground: "B.Sc. in Computer Science, Respected College.",
+          contacts: { linkedin: "#", whatsapp: "#", facebook: "#" },
+          personalTouch: [
+            "Contributing to open-source projects",
+            "Landscape photography",
+            "Playing the guitar.",
+          ],
+        },
+        {
+          id: 4,
+          name: "Tanvir Rahman",
+          image: "3. Md. Tanvir Rahman.jpg",
+          designation: "Head of Product, HopeHubTech",
+          tagline:
+            "Bridging the gap between user needs and technical solutions.",
+          profileSummary:
+            "Tanvir Rahman excels at product strategy and roadmap planning. He translates user feedback and market research into actionable features that provide real value to our customers.",
+          expertise: [
+            "Product Management",
+            "User Research & Analysis",
+            "Agile & Scrum Mastery",
+            "Market Strategy",
+            "Graphic Design & Video Editing",
+          ],
+          experience: [
+            {
+              role: "Head of Product",
+              company: "HopeHubTech",
+              period: "2025 - Present",
+              tasks: [
+                "Defining product vision and strategy.",
+                "Managing the product lifecycle from concept to launch.",
+                "Working closely with engineering, design, and marketing teams.",
+              ],
+            },
+          ],
+          achievements: [
+            "Successfully launched three major products, resulting in a 50% user base growth.",
+            "Developed and implemented a data-driven feature prioritization framework.",
+          ],
+          academicBackground: "MBA in Technology Management, Business School.",
+          contacts: { linkedin: "#", whatsapp: "#", facebook: "#" },
+          personalTouch: [
+            "Videography and short film making",
+            "Following the latest tech trends",
+            "Volunteering at local tech meetups.",
+          ],
+        },
+      ];
+
+      // --- Slider Panel Functionality ---
+      function showMemberDetails(id) {
+        const member = teamMembers.find((m) => m.id === id);
+        if (!member) return;
+
+        const cvContainer = document.getElementById("cv-content");
+
+        // Dynamically build the CV HTML
+        cvContainer.innerHTML = `
+          <div class="space-y-8">
+            <div class="flex flex-col md:flex-row items-center gap-8 pb-6 border-b dark:border-gray-600">
+              <img src="${member.image}" alt="${
+          member.name
+        }" class="w-40 h-40 object-cover rounded-full flex-shrink-0 shadow-lg">
+              <div class="text-center md:text-left">
+                <h2 class="text-3xl font-bold text-gray-900 dark:text-white">${
+                  member.name
+                }</h2>
+                <p class="text-green-500 text-lg mt-1">${member.designation}</p>
+                <p class="text-gray-500 dark:text-gray-400 mt-2 italic">"${
+                  member.tagline
+                }"</p>
+                <div class="flex justify-center md:justify-start items-center gap-4 mt-4">
+                  <a href="${
+                    member.contacts.linkedin
+                  }" target="_blank" class="text-gray-400 hover:text-blue-600"><i data-feather="linkedin"></i></a>
+                  <a href="https://wa.me/${member.contacts.whatsapp.replace(
+                    /\D/g,
+                    ""
+                  )}" target="_blank" class="text-gray-400 hover:text-green-500"><i data-feather="message-circle"></i></a>
+                  <a href="${
+                    member.contacts.facebook
+                  }" target="_blank" class="text-gray-400 hover:text-blue-500"><i data-feather="facebook"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="cv-section">
+              <h3 class="font-bold text-xl text-gray-800 dark:text-gray-200 mb-3">Profile Summary</h3>
+              <p class="text-gray-700 dark:text-gray-300">${
+                member.profileSummary
+              }</p>
+            </div>
+
+            <div class="cv-section">
+              <h3 class="font-bold text-xl text-gray-800 dark:text-gray-200 mb-3">Expertise</h3>
+              <ul class="text-gray-700 dark:text-gray-300">
+                ${member.expertise.map((item) => `<li>${item}</li>`).join("")}
+              </ul>
+            </div>
+
+            <div class="cv-section">
+              <h3 class="font-bold text-xl text-gray-800 dark:text-gray-200 mb-3">Experience</h3>
+              <div class="space-y-4">
+                ${member.experience
+                  .map(
+                    (job) => `
+                  <div>
+                    <h4 class="font-semibold text-lg text-gray-900 dark:text-white">${
+                      job.role
+                    }, <span class="text-green-500">${job.company}</span></h4>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">${
+                      job.period
+                    }</p>
+                    <ul class="text-gray-700 dark:text-gray-300">
+                      ${job.tasks.map((task) => `<li>${task}</li>`).join("")}
+                    </ul>
+                  </div>
+                `
+                  )
+                  .join("")}
+              </div>
+            </div>
+
+            <div class="cv-section">
+              <h3 class="font-bold text-xl text-gray-800 dark:text-gray-200 mb-3">Achievements</h3>
+              <ul class="text-gray-700 dark:text-gray-300">
+                ${member.achievements
+                  .map((item) => `<li>${item}</li>`)
+                  .join("")}
+              </ul>
+            </div>
+
+             <div class="cv-section">
+              <h3 class="font-bold text-xl text-gray-800 dark:text-gray-200 mb-3">Academic Background</h3>
+              <p class="text-gray-700 dark:text-gray-300">${
+                member.academicBackground
+              }</p>
+            </div>
+
+            <div class="cv-section">
+              <h3 class="font-bold text-xl text-gray-800 dark:text-gray-200 mb-3">Personal Touch</h3>
+              <ul class="text-gray-700 dark:text-gray-300">
+                ${member.personalTouch
+                  .map((item) => `<li>${item}</li>`)
+                  .join("")}
+              </ul>
+            </div>
+          </div>
+        `;
+
+        // Re-render Feather icons after updating the HTML
+        feather.replace();
+
+        // Show the panel
+        document.body.style.overflow = "hidden";
+        document.querySelector(".fixed").classList.remove("hidden");
+        setTimeout(
+          () => document.querySelector(".team-slider").classList.add("active"),
+          10
+        );
+      }
+
+      function hideMemberDetails() {
+        const slider = document.querySelector(".team-slider");
+        const container = document.querySelector(".fixed");
+        slider.classList.remove("active");
+        setTimeout(() => {
+          container.classList.add("hidden");
+          document.body.style.overflow = "auto";
+          // Clear content to prevent flash of old content on next open
+          document.getElementById("cv-content").innerHTML = "";
+        }, 500);
+      }
+    </script>
+    <script>
+      tailwind.config = { darkMode: "class" };
+    </script>
+  </body>
+</html>
