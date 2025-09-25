@@ -363,12 +363,11 @@
       });
 
       function updateTheme() {
-        const isDarkMode =
+        if (
           localStorage.theme === "dark" ||
           (!("theme" in localStorage) &&
-            window.matchMedia("(prefers-color-scheme: dark)").matches);
-
-        if (isDarkMode) {
+            window.matchMedia("(prefers-color-scheme: dark)").matches)
+        ) {
           document.documentElement.classList.add("dark");
           sunIcon.classList.remove("hidden");
           moonIcon.classList.add("hidden");
